@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>nulidone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Staatliches&display=swap');
+        @import url("//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css");
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            font-family: 'ALK Rex Bold';
+        }
+        body{
+            overflow: hidden;
+            background-color: rgb(229, 255, 196);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            height: 70%;
+        }
+        .top p{
+            font-size: 100px;
+        }
+        .middle{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .middle a{
+            text-decoration: none;
+            color: green;
+            font-size: 50px;
+            transition: 0.5s;
+        }
+        .middle a:hover{
+            scale: 1.1;
+            color: rgb(190, 232, 40) ;
+        }
+        .bottom button{
+            padding: 10px;
+            font-size: 40px;
+            background-color: #ADDF98;
+            color: white;
+            border: none;
+            transition: 0.5s;
+            border-radius: 5px;
+        }
+        .bottom button:hover{
+            padding-left: 10px;
+            padding-right: 10px;
+            letter-spacing: 5px;
+            background-color: #457f2c;
+        }
+        @media (max-width: 800px){
+            .top p{
+                font-size: 70px;
+            }
+            .middle a{
+                font-size: 40px;
+            }
+            .bottom button{
+                font-size: 30px;
+            }
+        }
+        @media (max-width: 600px){
+            .top p{
+                font-size: 50px;
+            }
+            .middle{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="top" data-aos="fade-down" data-aos-duration="2000">
+            <p>ვარ მეწარმე</p>
+        </div>
+        <div class="middle" data-aos="zoom-in" data-aos-duration="2000">
+            <a href="#">ფიზიკური პირი</a>
+            <a href="#">იურიდიული პირი</a>
+        </div>
+        <div class="bottom" data-aos="fade-up" data-aos-duration="2000">
+            <a href="./register.html"><button>უკან დაბრუნება</button></a>
+        </div>
+    </main>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
