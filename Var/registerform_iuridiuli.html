@@ -66,7 +66,7 @@
             font-size: 50px;
         }
         .middle{
-            width: 70%;
+            width: 90%;
         }
         .middle form{
             display: flex;
@@ -81,7 +81,7 @@
             flex-direction: column;
             gap: 5px;
         }
-        .form-side input{
+        .form-side input,select{
             padding: 20px;
             font-size: 20px;
             border: 4px solid rgb(120, 162, 65);
@@ -109,7 +109,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 70%;
+            width: 90%;
             gap: 10px;
         }
         .bottom .button2{
@@ -148,24 +148,14 @@
             .top p:nth-child(2){
                 font-size: 40px;
             }
-            body{
-                height: 100%;
-            }
-            .main{
-                height: 100%;
-            }
             .middle{
-                height: 100%;
-                width: 70%;
+                width: 85%;
             }
-            .middle form{
-                height: 100%;
-                width: 100%;
-                flex-direction: column;
-                gap: 40px;
+            .middle input,select{
+                font-size: 15px;
             }
-            .middle form .form-side{
-                width: 100%;
+            .middle p{
+                font-size: 15px;
             }
         }
         @media (max-width: 720px){
@@ -201,6 +191,14 @@
         main{
             margin-bottom: 50px;
         }
+        select{
+            color: green;
+            width: 100%;
+        }
+        select:focus{
+            outline: none;
+            background-color: white;
+        }
         input[type="date"]::before { 
             content: attr(data-placeholder);
             width: 100%;
@@ -208,6 +206,39 @@
         }
         input[type="date"]:focus::before,
         input[type="date"]:valid::before { display: none;}
+
+        @media (max-width: 1820px){
+            .middle{
+                width: 95%;
+            }
+            .bottom{
+                width: 95%;
+            }
+            .head{
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 1420px){
+            body{
+                height: 100%;
+            }
+            .main{
+                height: 100%;
+            }
+            .middle{
+                height: 100%;
+                width: 70%;
+            }
+            .middle form{
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+                gap: 40px;
+            }
+            .middle form .form-side{
+                width: 100%;
+            }
+        }
     </style>
     <title>Document</title>
 </head>
@@ -215,21 +246,25 @@
     <main >
         <div class="top" data-aos="fade-left" data-aos-duration="2000">
             <p>ვარ მეწარმე</p>
-            <p>ფიზიკური პირი</p>
+            <p>იურიდიული პირი</p>
         </div>
         <div class="middle" data-aos="zoom-in" data-aos-duration="2000">
             <form>
                 <div class="left-form form-side">
                     <div class="head">
-                        <p>ინფორმაცია მეწარმის შესახებ</p>
+                        <p>იურიდიული პირის შესახებ</p>
                     </div>
-                    <input type="text" placeholder="სახელი">
-                    <input type="text" placeholder="გვარი">
-                    <input type="date" data-placeholder="დაბადების თარიღი" required aria-required="true" />
-                    <input type="text" placeholder="პირადი ნომერი">
-                    <input type="tel" placeholder="ტელეფონის ნომერი">
+                    <select>
+                        <option disabled selected>აირჩიეთ იურიდიული პირის სამართლებრივი ფორმა</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                    <input type="text" placeholder="იურიდიული პირის სარეგისტრაციო დასახელება">
+                    <input type="text" placeholder="კომპანიის ბრენდული სახელი">
+                    <input type="text" placeholder="საიდენტიფიკაციო კოდი">
+                    <input type="tel" placeholder="ტელეფონის ნომერი (მფლობელის/დირექტორის)">
                 </div>
-                <div class="right-form form-side">
+                <div class="middle-form form-side">
                     <div class="head">
                         <p>ინფორმაცია პროდუქტის/სერვისის შესახებ</p>
                     </div>
@@ -238,6 +273,16 @@
                     <input type="text" placeholder="საქმიანობის კლასიფიკატორი">
                     <input type="text" placeholder="გაყიდვების არეალი (ქვეყანა ან ქვეყნები)">
                     <input type="tel" placeholder="ბიზნესის განხორციელების ადგილი (ქვეყანა)">
+                </div>
+                <div class="right-form form-side">
+                    <div class="head">
+                        <p>ინფორმაცია მეწარმის შესახებ</p>
+                    </div>
+                    <input type="text" placeholder="სახელი">
+                    <input type="text" placeholder="გვარი">
+                    <input type="date" data-placeholder="დაბადების თარიღი" required aria-required="true" />
+                    <input type="text" placeholder="პირადი ნომერი">
+                    <input type="text" placeholder="კომპანიაში დაკავებული პოზიცია">
                 </div>
             </form>
         </div>
