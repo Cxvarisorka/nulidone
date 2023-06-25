@@ -125,6 +125,42 @@
             color: green;
             background-color: transparent;
         }
+        select{
+            color: green;
+            width: 100%;
+        }
+        @media (max-width: 1820px){
+            .middle{
+                width: 95%;
+            }
+            .bottom{
+                width: 95%;
+            }
+            .head{
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 1420px){
+            body{
+                height: 100%;
+            }
+            .main{
+                height: 100%;
+            }
+            .middle{
+                height: 100%;
+                width: 70%;
+            }
+            .middle form{
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+                gap: 40px;
+            }
+            .middle form .form-side{
+                width: 100%;
+            }
+        }
         @media (max-width: 1550px){
             .middle{
                 width: 90%;
@@ -168,6 +204,31 @@
                 font-size: 20px;
             }
         }
+        @media (max-width: 670px){
+            .form-side{
+                justify-content: center;
+                align-items: center;
+            }
+            .head{
+                width: 80%;
+            }
+            .middle{
+                width: 100%;
+                padding: 0 20px;
+            }
+            .middle input{
+                width: 80%;
+            }
+            select{
+                width: 80%;
+            }
+            input[type='date']{
+                width: 80%;
+            }
+            .middle input:hover,input[type='date']:hover,select:hover{
+                width: 100%;
+            }
+        }
         @media (max-width: 420px){
             .top p:nth-child(1){
                 font-size: 40px;
@@ -191,10 +252,6 @@
         main{
             margin-bottom: 50px;
         }
-        select{
-            color: green;
-            width: 100%;
-        }
         select:focus{
             outline: none;
             background-color: white;
@@ -207,38 +264,7 @@
         input[type="date"]:focus::before,
         input[type="date"]:valid::before { display: none;}
 
-        @media (max-width: 1820px){
-            .middle{
-                width: 95%;
-            }
-            .bottom{
-                width: 95%;
-            }
-            .head{
-                font-size: 20px;
-            }
-        }
-        @media (max-width: 1420px){
-            body{
-                height: 100%;
-            }
-            .main{
-                height: 100%;
-            }
-            .middle{
-                height: 100%;
-                width: 70%;
-            }
-            .middle form{
-                height: 100%;
-                width: 100%;
-                flex-direction: column;
-                gap: 40px;
-            }
-            .middle form .form-side{
-                width: 100%;
-            }
-        }
+        
     </style>
     <title>Document</title>
 </head>
