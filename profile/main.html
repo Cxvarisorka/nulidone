@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Staatliches&display=swap');
+        @import url("//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css");
+        *{
+            font-family: 'ALK Rex Bold';
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        header p{
+            font-size: 60px;
+            color: green;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            width: 1400px;
+            height: 80%;
+        }
+        .side-sect{
+            display: flex;
+            width: 100%;
+            height: 50%;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 30px;
+        }
+        .folder{
+            width: 30%;
+            height: 90%;
+            background-image: url('../images/FolderWorkLast.png');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .folder:hover{
+            background-image: url('../images/folderpng.png');
+            transition: 0.5s;
+            scale: 1.1;
+            transform: rotate(-5deg);
+        }
+        .folder:hover p{
+            color: black;
+        }
+        .folder p{
+            margin-top: 90px;
+            font-size: 40px;
+            color: white;
+            transition: 0.5s;
+        }
+        @media (max-width:1400px){
+            section{
+                width: 1200px;
+            }
+            .folder p{
+                font-size: 35px;
+            }
+        }
+        @media (max-width:1200px){
+            header{
+                text-align: center;
+            }
+            section{
+                width: 95%;
+            }
+            .folder p{
+                font-size: 30px;
+            }
+            .folder{
+                height: 80%;
+                width: 30%;
+            }
+        }
+        @media (max-width: 970px){
+            main{
+                height: 100%;
+            }
+            section{
+                height: 100%;
+                padding: 50px 0;
+            }
+            .side-sect{
+                flex-direction: column;
+                gap: 50px;
+            }
+            .top-sect{
+                padding-bottom: 20px;
+            }
+            .folder{
+                height: 300px;
+                width: 400px;
+            }
+            header p{
+                font-size: 50px;
+            }
+            header{
+                margin-top: 50px;
+            }
+        }
+        @media (max-width: 500px){
+            .folder{
+                height: 250px;
+                width: 300px;
+            }
+            header p{
+                font-size: 35px;
+            }
+            .folder:hover{
+                transform: rotate(-2deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <p>დავით ქადაგიშვილის სამეწარმეო სივრცე</p>
+        </header>
+        <section>
+            <div class="side-sect top-sect">
+                <div class="folder folder-1">
+                    <p>ფოტო</p>
+                </div>
+                <div class="folder folder-1">
+                    <p>ვიდეო</p>
+                </div>
+                <div class="folder folder-1">
+                    <p>ტექსტი</p>
+                </div>
+            </div>
+            <div class="side-sect bottom-sect">
+                <div class="folder folder-1">
+                    <p>გეგმა და ანალიტიკა</p>
+                </div>
+                <div class="folder folder-1">
+                    <p>შემოთავაზებები</p>
+                </div>
+                <div class="folder folder-1">
+                    <p>შენი შეთავაზებები</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
