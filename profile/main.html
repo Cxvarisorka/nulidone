@@ -130,14 +130,20 @@
                 transform: rotate(-2deg);
             }
         }
+        a{
+            text-decoration: none;
+        }
+        main{
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
     <main>
-        <header>
+        <header data-aos="fade-down" data-aos-duration="2000">
             <p>დავით ქადაგიშვილის სამეწარმეო სივრცე</p>
         </header>
-        <section>
+        <section data-aos="fade-up" data-aos-duration="2000">
             <div class="side-sect top-sect">
                 <div class="folder folder-1">
                     <p>ფოტო</p>
@@ -151,7 +157,7 @@
             </div>
             <div class="side-sect bottom-sect">
                 <div class="folder folder-1">
-                    <p>გეგმა და ანალიტიკა</p>
+                    <a href="./gegmaanalitika.html"><p>გეგმა და ანალიტიკა</p></a>
                 </div>
                 <div class="folder folder-1">
                     <p>შემოთავაზებები</p>
@@ -162,5 +168,8 @@
             </div>
         </section>
     </main>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
