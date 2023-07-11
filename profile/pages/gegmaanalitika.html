@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Staatliches&display=swap');
+        @import url("//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css");
+        *{
+            font-family: 'ALK Rex Bold';
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ADDF98;
+        }
+        main .final{
+            width: 85%;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        main .final header{
+            border-radius: 50px;
+            background-color: #259960;
+            height: 27%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        main .final header p{
+            font-size: 70px;
+            color: white;
+        }
+        main .final footer{
+            border-radius: 50px;
+            width: 100%;
+            height: 70%;
+            background-color: #259960;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        main .final footer .choose{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        main .final footer .choose div{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .top-choose i{
+            font-size: 150px;
+            color: white;
+            transition: 0.5s;
+        }
+        .top-choose i:hover{
+            transform: scale(1.1);
+        }
+        .bottom-choose p{
+            font-size: 40px;
+            color: white;
+        }
+        .bottom-choose p::after{
+            content: '';
+            display: block;
+            transform: scaleX(0);
+            border-bottom: 3px solid white;
+            background: white;
+            transition:  0.5s ease;
+            transform-origin: center;
+        }
+        .bottom-choose p:hover::after{
+            transform: scaleX(1);
+        }
+        a{
+            text-decoration: none;
+        }
+        hr{
+            height: 100%;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .choose-sides{
+            width: 50%;
+            height: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 1460px){
+            .choose .top-choose i{
+                font-size: 100px;
+            }
+            .choose .bottom-choose p{
+                font-size: 30px;
+            }
+            hr{
+                height: 80%;
+            }
+        }
+        @media (max-width: 1100px){
+            main .final{
+                width: 95%;
+            }
+        }
+        @media (max-width: 1000px){
+            main .final header p{
+                font-size: 50px;
+            }
+            #disa{
+                display: none;
+            }
+            main .final footer{
+                padding-top: 30px;
+                flex-direction: column;
+            }
+            .choose-sides{
+                width: 100%;
+                height: 50%;
+            }
+            .choose-sides .choose .bottom-choose p{
+                font-size: 35px;
+            }
+        }
+        @media (max-width: 600px){
+            main{
+                padding: 40px 0;
+            }
+            #dsisa{
+                display: block;
+            }
+            main{
+                height: 1200px;
+            }
+            main .final{
+                height: 100%;
+            }
+            main .final header{
+                height: 15%;
+            }
+            main .final header p{
+                font-size: 40px;
+            }
+            main .final footer{
+                height: 80%;
+            }
+            main hr{
+                display: none;
+            }
+            main .final footer{
+                gap: 0;
+                justify-content: space-around;
+            }
+            .choose-sides{
+                flex-direction: column;
+                justify-content: space-around;
+                width: 100%;
+                height: 100%;
+                padding-top: 0;
+            }
+            main .final footer .choose-sides .choose{
+                width: 100%;
+                
+            }
+        }
+        main{
+            overflow: hidden;
+        }
+        footer{
+            overflow: hidden;
+        }
+        main{
+            flex-direction: column;
+            gap: 50px;
+        }
+        .bottom-final{
+            width: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottom-final a,button{
+            cursor: pointer;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .bottom-final button{
+            padding: 5px 10px;
+            background-color: #259960;
+            gap: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+        .bottom-final button:hover{
+            padding: 5px 15px;
+            letter-spacing: 3px;
+            scale: 1.05
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="final">
+            <header data-aos="fade-left" data-aos-duration="2000">
+                <p>გეგმა და ანალიტიკა</p>
+            </header>
+            <footer data-aos="fade-right" data-aos-duration="2000">
+                <div class="choose-sides">
+                    <div class="choose choose1">
+                        <div class="top-choose">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="bottom-choose">
+                            <a href="#"><p>ბიზნეს პროცესი</p></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="choose choose2">
+                        <div class="top-choose">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="bottom-choose">
+                            <a href="#"><p>გეგმა</p></a>
+                        </div>
+                    </div>
+                    <hr id="disa">
+                </div>
+                <div class="choose-sides">
+                    <div class="choose choose3">
+                        <div class="top-choose">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <div class="bottom-choose">
+                            <a href="#"><p>სტატისტიკა</p></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="choose choose4">
+                        <div class="top-choose">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                        <div class="bottom-choose">
+                            <a href="#"><p>ანალიზი</p></a>
+                        </div>
+                </div>
+                </div>
+            </footer>
+        </div>
+        <div class="bottom-final">
+            <a href="../main/main.html"><button><i class="fa-solid fa-arrow-left-long"></i>უკან</button></a>
+        </div>
+    </main>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Staatliches&display=swap');
+        @import url("//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css");
+        *{
+            font-family: 'ALK Rex Bold';
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: green;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: green;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: green;
+           opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: green;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: green;
+        }
+        
+        ::placeholder { /* Most modern browsers support this now. */
+            color: green;
+        }
+        body{
+            background-color: #ADDF98;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .top{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .top p{
+            color: green;
+        }
+        .top p:nth-child(1){
+            font-size: 100px;
+        }
+        .top p:nth-child(2){
+            font-size: 50px;
+        }
+        .middle{
+            width: 70%;
+        }
+        .middle form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 15px;
+        }
+        .middle form .form-side{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .form-side input,select{
+            height: 80px;
+            padding: 20px;
+            font-size: 20px;
+            border: 4px solid rgb(120, 162, 65);
+            text-align: center;
+            background-color: transparent;
+            transition: 0.5s;
+            box-sizing: border-box;
+        }
+        input:focus,select:focus{
+            outline: none;
+            background-color: white;
+        }
+        .head{
+            padding: 20px;
+            font-size: 25px;
+            border: 4px solid rgb(120, 162, 65);
+            text-align: center;
+            background-color: white;
+        }
+        .head p{
+            margin: 0;
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+        }
+        .bottom .button2{
+            width: 300px;
+            font-size: 30px;
+            padding: 10px;
+            background-color: green;
+            border: 4px solid green;
+            color: white; 
+            transition: 0.3s;
+        }
+        .bottom .button2:hover{
+            color: green;
+            background-color: transparent;
+        }
+        input[type='date']{
+            width: 100%;
+        }
+        input[type="date"]::before { 
+            content: attr(data-placeholder);
+            width: 100%;
+            color: green;
+        }
+        input[type="date"]:focus::before,
+        input[type="date"]:valid::before { display: none;}
+        .main_register_form{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 5px;
+        }
+        @media (max-width: 1830px){
+            main{
+                margin-bottom: 15px;
+            }
+        }
+        @media (max-width: 1550px){
+            .middle{
+                width: 90%;
+            }
+        }
+        @media (max-width:1200px){
+            .middle{
+                width: 85%;
+            }
+            .middle input,select{
+                font-size: 20px;
+            }
+            .middle p{
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 1050px){
+            .top p:nth-child(1){
+                font-size: 70px;
+            }
+            .top p:nth-child(2){
+                font-size: 40px;
+            }
+            body{
+                height: 100%;
+            }
+            .main{
+                height: 100%;
+            }
+            .middle{
+                height: 100%;
+                width: 70%;
+            }
+            .middle form{
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+                gap: 40px;
+            }
+            .middle .main_register_form{
+                flex-direction: column;
+                gap: 40px;
+            }
+            .middle form .form-side{
+                width: 100%;
+            }
+        }
+        @media (max-width: 1230px){
+            .top{
+                text-align: center;
+                flex-direction: column;
+            }
+            .bottom .button2{
+                width: 200px;
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 670px){
+            .form-side{
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .head{
+                width: 80%;
+            }
+            .middle{
+                width: 100%;
+                padding: 0 20px;
+            }
+            .middle input,select{
+                width: 80%;
+            }
+            input[type='date']{
+                width: 80%;
+            }
+            .middle input:hover,input[type='date']:hover,select:hover{
+                width: 100%;
+            }
+        }
+        @media (max-width: 420px){
+            .top p:nth-child(1){
+                font-size: 40px;
+            }
+            .top p:nth-child(2){
+                font-size: 20px;
+            }
+            .middle input,select{
+                font-size: 13px;
+            }
+            .head p{
+                font-size: 15px;
+            }
+            .bottom .button2{
+                font-size: 15px;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <main >
+        <div class="top" data-aos="fade-left" data-aos-duration="2000">
+            <p>ვარ მეწარმე</p>
+            <p>ფიზიკური პირი - მაქვს იდეა</p>
+        </div>
+        <div class="middle" data-aos="zoom-in" data-aos-duration="2000">
+            <form id="register_form">
+                <div class="main_register_form">
+                    <div class="left-form form-side">
+                        <div class="head">
+                            <p>ინფორმაცია მეწარმის შესახებ</p>
+                        </div>
+                        <input type="text" name="name" placeholder="სახელი" required>
+                        <input type="text" name="lastname" placeholder="გვარი" required>
+                        <input type="date" name="birthday_date"  data-placeholder="დაბადების თარიღი" required aria-required="true"/>
+                        <input type="text" name="person_id"  placeholder="პირადი ნომერი" required>
+                        <input type="tel" name="tel" placeholder="ტელეფონის ნომერი +995" required>
+                        <input type="email" name="email" placeholder="თქვენი ელფოსტა">
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="/html/profile/main/main.html"><button type="submit" class="button2">დაიწყე!</button></a>
+                    <a href="../ideaoractive.html"><button type="button" class="button2">უკან დაბრუნება</button></a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/html/javascript/varmewarmeidea.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Nulidone</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Staatliches&display=swap');
+        @import url("//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css");
+        *{
+            font-family: 'ALK Rex Bold';
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        body{
+            overflow: hidden;
+            background-color: #ADDF98;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            text-align: center;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 60px;
+            box-shadow: rgba(50, 50, 93, 0.5) 0px 30px 60px -12px inset, rgba(0, 0, 0, 1) 0px 18px 36px -18px inset;
+        }
+        .main-choose{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        main h1{
+            font-size: 120px;
+            color: rgb(46, 42, 3);
+        }
+        .choose{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .select{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .circle{
+            width: 70px;
+            height: 70px;
+            background-color: #259960;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            
+        }
+        .white-circle{
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+        .main-select{
+            width: 400px;
+            height: 70px;
+            background-color: #259960;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .main-select a{
+            font-size: 30px;
+            color: white;
+            transition: 0.5s;
+        }
+        .choose:hover .select .circle{
+            background-color: white;
+        }
+        .choose:hover .select .circle .white-circle{
+            background-color: #259960;
+        }
+        .choose:hover .select .main-select{
+            background-color: white;
+        }
+        .choose:hover .select .main-select a{
+            color: #259960;
+            scale: 1.05;
+        }
+        @media (max-width: 650px){
+            main h1{
+                font-size: 80px;
+            }
+            .main-choose{
+                gap: 20px;
+            }
+            .circle{
+                width: 60px;
+                height: 60px;
+            }
+            .white-circle{
+                width: 30px;
+                height: 30px;
+            }
+            .main-select{
+                width: 300px;
+                height: 60px;
+            }
+            .main-select a{
+                font-size: 25px;
+            }
+        }
+        @media (max-width: 405px){
+            main h1{
+                font-size: 60px;
+            }
+            .main-choose{
+                gap: 15px;
+            }
+            .circle{
+                width: 50px;
+                height: 50px;
+            }
+            .white-circle{
+                width: 20px;
+                height: 20px;
+            }
+            .main-select{
+                width: 250px;
+                height: 50px;
+            }
+            .main-select a{
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 330px){
+            main h1{
+                font-size: 50px;
+            }
+            .main-choose{
+                gap: 10px;
+            }
+            .circle{
+                width: 30px;
+                height: 30px;
+            }
+            .white-circle{
+                width: 15px;
+                height: 15px;
+            }
+            .main-select{
+                width: 210px;
+                height: 30px;
+            }
+            .main-select a{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 data-aos="fade-down" data-aos-duration="2000">იურიდიული პირი</h1>
+        <div class="main-choose">
+            <div class="choose" data-aos="fade-left" data-aos-duration="2000">
+                <div class="select">
+                    <div class="circle">
+                        <div class="white-circle"></div>
+                    </div>
+                    <div class="main-select">
+                        <a href="#">ვარ სტარტაპი</a>
+                    </div>
+                </div>
+            </div>
+            <div class="choose" data-aos="fade-right" data-aos-duration="2000">
+                <div class="select">
+                    <div class="circle">
+                        <div class="white-circle"></div>
+                    </div>
+                    <div class="main-select">
+                        <a href="#">აქტიური ბიზნესი</a>
+                    </div>
+                </div>
+            </div>
+            <div class="choose" data-aos="fade-left" data-aos-duration="2000">
+                <div class="select">
+                    <div class="circle">
+                        <div class="white-circle"></div>
+                    </div>
+                    <div class="main-select">
+                        <a href="/html/Varmewarme/varmewarme.html">უკან დაბრუნება</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
